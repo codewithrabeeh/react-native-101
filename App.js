@@ -1,16 +1,47 @@
-import { View, Text, Image, ImageBackground } from "react-native"
+import { View, Text, Image, ScrollView } from "react-native"
 const img = require('./assets/image.jpg')
 
 export default function App() {
-  return <View style={{ backgroundColor: "beige", flex: 1, padding: 30 }}>
-    {/* <Image source={img} style={{ width: 300, height: 300 }} />
 
-    // Won't work if you pass without uri property!
-    <Image source={{ uri: 'https://picsum.photos/seed/picsum/200/300' }} style={{ width: 300, height: 300, marginTop: 10 }} /> */}
+  return <View style={{ backgroundColor: "beige", flex: 1, padding: 60 }}>
+    {/* 
+        ScrollView is used to scroll the content that overflow.
+        Always wrap content inside View with ScrollView.
+    */}
+    
+    <ScrollView>
 
-    {/* If there is no flex: 1 property, then image won't stretch entire screen */}
-    <ImageBackground source={img} style={{ flex: 1 }}>
-      <Text>Image Text</Text>
-    </ImageBackground>
+      <Image source={img} style={{ width: 300, height: 300 }} />
+
+      <Text>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatibus, quibusdam, quia, quos voluptatem voluptatum quod
+        consequatur voluptate quas doloribus quidem. Quisquam voluptatibus,
+        quibusdam, quia, quos voluptatem voluptatum quod consequatur voluptate
+        quas doloribus quidem. Quisquam voluptatibus, quibusdam, quia, quos
+        voluptatem voluptatum quod consequatur voluptate quas doloribus quidem.
+        Quisquam voluptatibus, quibusdam, quia, quos voluptatem voluptatum quod
+        consequatur voluptate quas doloribus quidem. Quisquam voluptatibus,
+        quibusdam, quia, quos voluptatem voluptatum quod consequatur voluptate
+        quas doloribus quidem. Quisquam voluptatibus, quibusdam, quia, quos
+        voluptatem voluptatum quod consequatur voluptate quas doloribus quidem.
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        voluptatibus, quibusdam, quia, quos voluptatem voluptatum quod
+        consequatur voluptate quas doloribus quidem. Quisquam voluptatibus,
+        quibusdam, quia, quos voluptatem voluptatum quod consequatur voluptate
+        quas doloribus quidem. Quisquam voluptatibus, quibusdam, quia, quos
+        voluptatem voluptatum quod consequatur voluptate quas doloribus quidem.
+        Quisquam voluptatibus, quibusdam, quia, quos voluptatem voluptatum quod
+        consequatur voluptate quas doloribus quidem. Quisquam voluptatibus,
+        quibusdam, quia, quos voluptatem voluptatum quod consequatur voluptate
+        quas doloribus quidem. Quisquam voluptatibus, quibusdam, quia, quos
+        voluptatem voluptatum quod consequatur voluptate quas doloribus quidem.
+      </Text>
+
+      <Image source={img} style={{ width: 300, height: 300 }} />
+
+    </ScrollView>
+
   </View>
 }
